@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container nav {    
+            width: 100%;
+            height: 100vh;
+            background-color: #f1f1f1;
+        }
+        #container nav ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            height: inherit;
+        }
+        #container nav ul li{
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: sans-serif;
+            color: #333;
+        }
+        #container nav ul #active{
+            display: none;
+        }
+        #container nav ul li:hover #active{
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            background-color: #dbb9b9;
+        }
+        #container nav ul #active ul{
+            display: block;
+           border: 2px solid #333;
+           width: 200px;
+            height: 100%;
+        }
+
+        #container nav ul #home #active ul:hover{
+            cursor: pointer;
+        }
+        #container nav ul #home #active ul li:hover{
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+
+        <nav>
+            <ul>
+                <li id="home">home
+                    <div id="active">
+                            <ul>
+                                <li>Html</li>
+                                <li>Css</li>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                            </ul>
+                    </div>
+
+                </li>
+                <li>about</li>
+                <li>contact</li>
+                <li>help</li>
+            </ul>
+        </nav>
+    </section>
+
+</body>
+</html>
